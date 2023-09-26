@@ -4,7 +4,7 @@
 
 (def filename "resources/suspects.csv")
 
-(defn parse [string]
-  (map #(string/split % #",") (string/split string #"\n")))
+(defn parse [filename-string]
+  (map #(string/split % #",") (string/split filename-string #"\n")))
 
 (parse (slurp filename))
